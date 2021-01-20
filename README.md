@@ -1,3 +1,10 @@
+<!--
+SPDX-FileCopyrightText: 2021 Helmholtz Centre for Environmental Research (UFZ)
+SPDX-FileCopyrightText: 2021 Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # Netplan Role
 
 Ansible role to install and configure Netplan.
