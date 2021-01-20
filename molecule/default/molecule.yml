@@ -16,6 +16,14 @@ platforms:
     override_command: false
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    network_mode: 'default'
+    docker_networks:
+      - name: 'netplan_network'
+        ipam_config:
+          - subnet: '10.1.0.0/24'
+    networks:
+      - name: 'netplan_network'
+        ipv4_address: '10.1.0.2'
 lint: |
   yamllint --strict --format colored .
   ansible-lint -v --force-color --exclude .pipenv/ .
