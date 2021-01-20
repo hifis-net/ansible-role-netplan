@@ -25,6 +25,15 @@ network:
         - "{{ addresses }}"
 {% endfor %}
 {% endif %}
+{% if ethernet['nameservers'] is defined %}
+      nameservers:
+{% if ethernet['nameservers']['addresses'] is defined %}
+        addresses:
+{%for addresses in ethernet['nameservers']['addresses'] %}
+          - "{{ addresses }}"
+{% endfor %}
+{% endif %}
+{% endif %}
 {% endif %}
 {% endfor %}
 {% else %}
