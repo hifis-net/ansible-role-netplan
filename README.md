@@ -48,9 +48,13 @@ Sample configuration to set up networking with Netplan:
 netplan_ethernets:
   - interface_name: 'eth0'
     dhcp4: 'no'
-    gateway4: '172.17.0.1'
+    gateway4: '10.1.0.1'
     addresses:
-      - '172.17.0.10/16'
+      - '10.1.0.10/24'
+    nameservers:
+      addresses:
+        - '8.8.8.8'
+        - '9.9.9.9'
 ```
 
 ## Dependencies
