@@ -5,10 +5,6 @@
 
 ---
 
-- name: Output
-  debug:
-    msg: "{{ ansible_all_ipv4_addresses }}, {{ ansible_interfaces }}"
-
 - name: Install netplan packages.
   become: yes
   package:
