@@ -13,6 +13,7 @@ yamllint = "*"
 ansible-lint = "*"
 molecule = {extras = ["docker"], version = "*"}
 reuse = "*"
+netaddr = "*"
 
 [packages]
 ansible = "~=2.10.0"
