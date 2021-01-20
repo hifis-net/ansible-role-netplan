@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2021 Helmholtz Centre for Environmental Research (UFZ)
+# SPDX-FileCopyrightText: 2021 Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+# Name of netplan configuration file
+netplan_configuration_file_template: 'config.yaml.j2'
+# Path to netplan configuration file
+netplan_configuration_file_path: '/etc/netplan/config.yaml'
+# Packages to be installed with netplan
+netplan_packages:
+  - 'netplan.io'
+# Sample network configuration
+netplan_ethernets:
+  - interface_name: 'eth0'
+    dhcp4: 'no'
+    gateway4: '172.17.0.1'
+    addresses:
+      - '172.17.0.10/16'
+
+...

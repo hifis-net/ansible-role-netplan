@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2021 Helmholtz Centre for Environmental Research (UFZ)
+# SPDX-FileCopyrightText: 2021 Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+
+network:
+  version: 2
+  renderer: networkd
+{% if netplan_ethernets is defined %}
+  ethernets:
+{% for ethernet in netplan_ethernets %}
+{% if ethernet['interface_name'] is defined %}
+    {{ ethernet['interface_name'] }}:
+{% if ethernet['dhcp4'] is defined %}
+      dhcp4: "{{ ethernet['dhcp4'] }}"
+{% endif %}
+{% if ethernet['gateway4'] is defined %}
+      gateway4: "{{ ethernet['gateway4'] }}"
+{% endif %}
+{% if ethernet['addresses'] is defined %}
+      addresses:
+{%for addresses in ethernet['addresses'] %}
+        - "{{ addresses }}"
+{% endfor %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% else %}
+  ethernets:
+    enp3s0:
+      dhcp4: "yes"
+{% endif %}
+
+...
