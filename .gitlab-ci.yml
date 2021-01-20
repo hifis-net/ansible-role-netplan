@@ -31,7 +31,7 @@ variables:
 
 validate:
   stage: lint
-  image: python:3.9
+  image: python:3.8
   variables: *cache_variables
   before_script:
     - *before_script
