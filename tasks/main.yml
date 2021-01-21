@@ -5,6 +5,11 @@
 
 ---
 
+- name: Check whether network configurations are given.
+  assert:
+    that:
+      - netplan_ethernets is defined and netplan_ethernets | length > 0
+
 - name: Install netplan packages.
   become: yes
   package:
