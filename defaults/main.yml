@@ -4,22 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 
 ---
-# Name of netplan configuration file
+# Name of netplan configuration file template
 netplan_configuration_file_template: 'config.yaml.j2'
 # Path to netplan configuration file
 netplan_configuration_file_path: '/etc/netplan/config.yaml'
-# Packages to be installed with netplan
+# Packages to be installed
 netplan_packages:
   - 'netplan.io'
-# Sample network configuration
-netplan_ethernets:
-  - interface_name: 'eth0'
-    dhcp4: 'no'
-    gateway4: '10.1.0.1'
-    addresses:
-      - '10.1.0.10/24'
-    nameservers:
-      addresses:
-        - '8.8.8.8'
-        - '9.9.9.9'
+
 ...
