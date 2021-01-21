@@ -20,7 +20,7 @@ Group your changes into these categories:
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.1.0...master)
 
-## [0.1.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.1.0) - 2021-01-20
+## [0.1.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.1.0) - 2021-01-25
 
 ### Added
 
