@@ -44,6 +44,22 @@ Name of the template providing the Netplan configuration file:
 netplan_configuration_file_template: 'config.yaml.j2'
 ```
 
+#### Directory of the Netplan Configuration Files
+
+Directory of the Netplan configuration files:
+
+```yaml
+netplan_configuration_dir: '/etc/netplan'
+```
+
+#### Name of the Netplan Configuration File
+
+Name of the Netplan configuration file:
+
+```yaml
+netplan_configuration_file: 'config.yaml'
+```
+
 #### Path to the Netplan Configuration File
 
 Path to the Netplan configuration file:
