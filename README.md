@@ -15,32 +15,9 @@ None.
 
 ## Role Variables
 
-### Name of the Netplan Configuration File
+### Mandatory Variables to be Set that are Not Set with Defaults
 
-Name of the template providing the Netplan configuration file:
-
-```yaml
-netplan_configuration_file_template: 'config.yaml.j2'
-```
-
-### Path to the Netplan Configuration File
-
-Path to the Netplan configuration file:
-
-```yaml
-netplan_configuration_file_path: '/etc/netplan/config.yaml'
-```
-
-### Packages to be Installed
-
-List of packages that need to be installed alongside Netplan:
-
-```yaml
-netplan_packages:
-  - 'netplan.io'
-```
-
-### Sample Network Configuration
+#### Sample Network Configuration
 
 Sample configuration to set up networking with Netplan:
 
@@ -55,6 +32,33 @@ netplan_ethernets:
       addresses:
         - '8.8.8.8'
         - '9.9.9.9'
+```
+
+### Variables that are Set with Defaults
+
+#### Name of the Netplan Configuration File Template
+
+Name of the template providing the Netplan configuration file:
+
+```yaml
+netplan_configuration_file_template: 'config.yaml.j2'
+```
+
+#### Path to the Netplan Configuration File
+
+Path to the Netplan configuration file:
+
+```yaml
+netplan_configuration_file_path: '/etc/netplan/config.yaml'
+```
+
+#### Packages to be Installed
+
+List of packages that need to be installed:
+
+```yaml
+netplan_packages:
+  - 'netplan.io'
 ```
 
 ## Dependencies
