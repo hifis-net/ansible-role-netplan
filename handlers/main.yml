@@ -6,10 +6,12 @@
 ---
 - name: Generate netplan networking
   become: yes
-  command: netplan generate
+  command:
+    cmd: netplan generate
 
 - name: Apply netplan networking
   become: yes
-  command: netplan apply
+  command:
+    cmd: netplan apply
 
 ...
