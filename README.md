@@ -36,6 +36,14 @@ netplan_ethernets:
 
 ### Variables that are Set with Defaults
 
+#### Flag to delete any pre-existing Netplan configuration files
+
+Flag decides on whether pre-existing Netplan configuration files should be deleted:
+
+```yaml
+netplan_remove_existing_configs: true
+```
+
 #### Name of the Netplan Configuration File Template
 
 Name of the template providing the Netplan configuration file:
@@ -65,7 +73,7 @@ netplan_configuration_file: 'config.yaml'
 Path to the Netplan configuration file:
 
 ```yaml
-netplan_configuration_file_path: '/etc/netplan/config.yaml'
+netplan_configuration_file_path: "{{ (netplan_configuration_dir, netplan_configuration_file) | path_join }}"
 ```
 
 #### Packages to be Installed

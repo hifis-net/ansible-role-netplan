@@ -17,19 +17,22 @@
     state: present
     update_cache: yes
 
-- name: Get netplan config files.
-  find:
-    paths: "{{ netplan_configuration_dir }}"
-    file_type: file
-    excludes:
-      - "{{ netplan_configuration_file }}"
-  register: netplan_config_files
+- name: Delete pre-existing network settings files.
+  when: netplan_remove_existing_configs
+  block:
+    - name: Get netplan config files.
+      find:
+        paths: "{{ netplan_configuration_dir }}"
+        file_type: file
+        excludes:
+          - "{{ netplan_configuration_file }}"
+      register: netplan_config_files
 
-- name: Remove netplan config files.
-  file:
-    path: "{{ item.path }}"
-    state: absent
-  with_items: "{{ netplan_config_files['files'] }}"
+    - name: Remove netplan config files.
+      file:
+        path: "{{ item.path }}"
+        state: absent
+      with_items: "{{ netplan_config_files['files'] }}"
 
 - name: Create a netplan config file from template.
   template:
