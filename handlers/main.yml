@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2021 Helmholtz Centre for Environmental Research (UFZ)
+# SPDX-FileCopyrightText: 2021 Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+- name: Generate netplan networking
+  become: yes
+  command:
+    cmd: netplan generate
+
+- name: Apply netplan networking
+  become: yes
+  command:
+    cmd: netplan apply
+
+...

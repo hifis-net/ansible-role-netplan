@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2021 Helmholtz Centre for Environmental Research (UFZ)
+# SPDX-FileCopyrightText: 2021 Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+#
+# SPDX-License-Identifier: Apache-2.0
+
+---
+- name: Converge
+  hosts: all
+  vars:
+    netplan_ethernets:
+      - interface_name: 'eth0'
+        dhcp4: 'no'
+        gateway4: '10.1.0.1'
+        addresses:
+          - '10.1.0.10/24'
+        nameservers:
+          addresses:
+            - '8.8.8.8'
+            - '9.9.9.9'
+  tasks:
+    - name: "Include netplan_role"
+      include_role:
+        name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
+
+...
