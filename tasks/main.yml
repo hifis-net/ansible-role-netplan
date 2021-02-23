@@ -17,6 +17,15 @@
     state: present
     update_cache: yes
 
+- name: Remove ifupdown package.
+  become: yes
+  ansible.builtin.apt:
+    name: 'ifupdown'
+    state: absent
+    purge: yes
+    autoremove: yes
+  when: netplan_uninstall_ifupdown | bool
+
 - name: Delete pre-existing network settings files.
   when: netplan_remove_existing_configs
   block:
