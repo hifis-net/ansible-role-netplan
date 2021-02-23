@@ -20,6 +20,12 @@ Group your changes into these categories:
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.1.0...main)
 
+### Added
+
+- Add a task that removes the package 'ifupdown' in favour of 'netplan'
+  ([!2](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/2)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.1.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.1.0) - 2021-01-25
 
 ### Added
