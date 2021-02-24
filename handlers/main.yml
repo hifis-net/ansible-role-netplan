@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 ---
+
 - name: Generate netplan networking
   become: yes
   command:
@@ -13,5 +14,11 @@
   become: yes
   command:
     cmd: netplan apply
+
+- name: Gather network facts
+  become: yes
+  ansible.builtin.setup:
+    gather_subset:
+      - network
 
 ...
