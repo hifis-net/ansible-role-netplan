@@ -20,6 +20,9 @@
           addresses:
             - '8.8.8.8'
             - '9.9.9.9'
+          search:
+            - 'domain.local'
+            - 'domain.name'
   tasks:
     - name: Check network settings if no DHCP is set.
       when: netplan_ethernets is defined and netplan_ethernets | length > 0 and netplan_ethernets[0]['dhcp4'] == 'no'
