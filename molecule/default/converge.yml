@@ -17,6 +17,9 @@
           addresses:
             - '8.8.8.8'
             - '9.9.9.9'
+          search:
+            - 'domain.local'
+            - 'domain.name'
   tasks:
     - name: "Include netplan_role"
       include_role:

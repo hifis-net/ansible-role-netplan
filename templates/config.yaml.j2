@@ -33,6 +33,12 @@ network:
           - "{{ addresses }}"
 {% endfor %}
 {% endif %}
+{% if ethernet['nameservers']['search'] is defined %}
+        search:
+{%for search in ethernet['nameservers']['search'] %}
+          - "{{ search }}"
+{% endfor %}
+{% endif %}
 {% endif %}
 {% endif %}
 {% endfor %}

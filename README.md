@@ -32,6 +32,9 @@ netplan_ethernets:
       addresses:
         - '8.8.8.8'
         - '9.9.9.9'
+      search:
+        - 'domain.local'
+        - 'domain.name'
 ```
 
 ### Variables that are Set with Defaults
