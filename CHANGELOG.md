@@ -26,6 +26,12 @@ Group your changes into these categories:
   ([!2](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/2)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
 
+### Changed
+
+- Refine the Netplan configuration file template
+  ([!3](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/3)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.1.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.1.0) - 2021-01-25
 
 ### Added
