@@ -85,6 +85,14 @@ netplan_packages:
   - 'netplan.io'
 ```
 
+#### Flag to Uninstall Package ifupdown
+
+Flag to decide whether package 'ifupdown' should be uninstalled:
+
+```yaml
+netplan_uninstall_ifupdown: true
+```
+
 ## Dependencies
 
 None.
