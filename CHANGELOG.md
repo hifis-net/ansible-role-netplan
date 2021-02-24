@@ -32,6 +32,12 @@ Group your changes into these categories:
   ([!3](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/3)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
 
+### Changed
+
+- Call handler to gather facts after IP addresses have been changed by Netplan
+  ([!4](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/4)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.1.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.1.0) - 2021-01-25
 
 ### Added
