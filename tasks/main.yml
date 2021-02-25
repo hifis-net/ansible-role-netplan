@@ -53,5 +53,6 @@
   notify:
     - Generate netplan networking
     - Apply netplan networking
+    - Gather network facts
 
 ...
