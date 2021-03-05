@@ -98,6 +98,21 @@ If the package is removed too early, the role will hang.
 
 For that reason this role does **not** handle the removal of the `ifupdown` package.
 
+## Limitations
+
+### Bootstrapping Network Configurations is not Supported
+
+Please note that networking configurations can not be bootstrapped during
+role execution.
+The respective managed nodes need networking to be configured already.
+
+### Changing IP Addresses are not Handled
+
+Be aware that it is not permissible to change the IP addresses of a 
+managed node during role execution. 
+Otherwise, this might result in a hanging role as soon as `netplan apply`
+is executed, because Ansible loses its SSH connection in that case.
+
 ## Dependencies
 
 None.
