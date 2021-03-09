@@ -17,7 +17,5 @@ netplan_configuration_file_path: "{{ (netplan_configuration_dir, netplan_configu
 # Packages to be installed
 netplan_packages:
   - 'netplan.io'
-# Flag to decide whether package ifupdown should be uninstalled
-netplan_uninstall_ifupdown: true
 
 ...
