@@ -20,6 +20,12 @@ Group your changes into these categories:
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.0...main)
 
+### Fixed
+
+- Remove task that uninstalls package 'ifupdown' from role tasks
+  ([!6](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/6)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.2.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.0) - 2021-03-01
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.1.0...v0.2.0)
