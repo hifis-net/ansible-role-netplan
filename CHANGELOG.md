@@ -18,7 +18,11 @@ Group your changes into these categories:
 
 ## Unreleased
 
-[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.0...main)
+[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.1...main)
+
+## [0.2.1](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.1) - 2021-03-10
+
+[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.0...v0.2.1)
 
 ### Fixed
 
