@@ -104,14 +104,16 @@ For that reason this role does **not** handle the removal of the `ifupdown` pack
 
 Please note that networking configurations can not be bootstrapped during
 role execution.
-The respective managed nodes need networking to be configured already.
+The respective managed nodes need networking to be configured beforehand.
 
-### Changing IP Addresses are not Handled
+### No support for changing the IP over which Ansible connects
 
-Be aware that it is not permissible to change the IP addresses of a 
-managed node during role execution. 
-Otherwise, this might result in a hanging role as soon as `netplan apply`
-is executed, because Ansible loses its SSH connection in that case.
+Be aware that this role does not support changing the IP addresses
+over which Ansible connects out of the box.
+If you change the IP address over which Ansible connects,
+you might end up in a hanging role as soon as `netplan apply`
+is executed.
+Ansible loses its SSH connection in that case.
 
 ## Dependencies
 
