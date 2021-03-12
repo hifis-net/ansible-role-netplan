@@ -52,6 +52,7 @@
     owner: root
     group: root
     mode: '0644'
+    backup: yes
   notify:
     - Generate netplan networking
     - Apply netplan networking

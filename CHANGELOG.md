@@ -20,6 +20,12 @@ Group your changes into these categories:
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.1...main)
 
+### Added
+
+- Backup configuration file when changing the Netplan network configuration
+  ([!8](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/8)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.2.1](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.1) - 2021-03-10
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.0...v0.2.1)
