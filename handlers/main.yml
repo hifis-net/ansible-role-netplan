@@ -21,4 +21,9 @@
     gather_subset:
       - network
 
+- name: Reboot managed node
+  become: yes
+  ansible.builtin.reboot:
+    reboot_timeout: 300
+
 ...
