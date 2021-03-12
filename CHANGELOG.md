@@ -25,6 +25,9 @@ Group your changes into these categories:
 - Backup configuration file when changing the Netplan network configuration
   ([!8](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/8)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+- Add a section to file README to inform users about networking limitations of the role
+  ([!10](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/10)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
 
 ## [0.2.1](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.1) - 2021-03-10
 
@@ -34,12 +37,6 @@ Group your changes into these categories:
 
 - Remove task that uninstalls package 'ifupdown' from role tasks
   ([!6](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/6)
-  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
-
-### Added
-
-- Add a section to file README to inform users about networking limitations of the role
-  ([!10](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/10)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
 
 ## [0.2.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.0) - 2021-03-01
