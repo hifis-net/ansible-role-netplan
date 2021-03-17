@@ -28,11 +28,17 @@ Group your changes into these categories:
 - Add a section to file README to inform users about networking limitations of the role
   ([!10](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/10)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
-
+  
 ### Changed
 
 - Use templating comments for copyright notice in template config.yaml.j2
   ([!7](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/7)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
+### Fixed
+
+- Reboot managed node if migrating networking from ifupdown to netplan
+  ([!13](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/13)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
 
 ## [0.2.1](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.1) - 2021-03-10

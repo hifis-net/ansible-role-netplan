@@ -58,4 +58,18 @@
     - Apply netplan networking
     - Gather network facts
 
+- name: Check if file ifstate exists.
+  ansible.builtin.stat:
+    path: '/run/network/ifstate'
+  register: file_ifstate
+
+- name: Check if reboot is required.
+  ansible.builtin.debug:
+    msg: |
+      "Reboot is required to switch from ifupdown to netplan.
+       Triggering the reboot handler now."
+  changed_when: file_ifstate.stat.exists
+  when: file_ifstate.stat.exists
+  notify: Reboot managed node
+
 ...
