@@ -16,9 +16,9 @@ Group your changes into these categories:
 
 `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`.
 
-## Unreleased
+## [0.3.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.3.0) - 2021-03-17
 
-[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.1...main)
+[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.1...v0.3.0)
 
 ### Added
 
