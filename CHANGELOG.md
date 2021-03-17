@@ -29,6 +29,12 @@ Group your changes into these categories:
   ([!10](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/10)
   by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
 
+### Changed
+
+- Use templating comments for copyright notice in template config.yaml.j2
+  ([!7](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/7)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.2.1](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.2.1) - 2021-03-10
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.0...v0.2.1)
