@@ -69,18 +69,18 @@
     - name: Read in ifstate file content.
       ansible.builtin.slurp:
         src: "{{ ifupdown_ifstate_file }}"
-      register: slurped_file_content
+      register: slurped_file
 
     - name: Compare ifstate file content to determine whether reboot is necessary.
       ansible.builtin.set_fact:
-        reboot_to_switch_to_netplan: "{{ slurped_file_content.content != 'lo=lo\n'|b64encode }}"
+        reboot_to_switch_to_netplan: "{{ slurped_file.content != 'lo=lo\n'|b64encode }}"
 
-    - name: Trigger reboot of host if necessary.
+    - name: Trigger reboot to switch to netplan.
       ansible.builtin.debug:
         msg: |
           "Reboot is required to switch from ifupdown to netplan.
            Triggering the reboot handler now."
-      changed_when: file_ifstate.stat.exists
+      changed_when: reboot_to_switch_to_netplan | bool
       when:
         - reboot_to_switch_to_netplan is defined
         - reboot_to_switch_to_netplan | bool
