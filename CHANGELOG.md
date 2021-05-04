@@ -16,6 +16,14 @@ Group your changes into these categories:
 
 `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`.
 
+## Unreleased
+
+### Fixed
+
+- Add checks to determine whether reboot of hosts are necessary when switching to Netplan
+  ([!15](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/15)
+  by [christian.hueser.hzdr](https://gitlab.com/christian.hueser.hzdr)).
+
 ## [0.3.0](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.3.0) - 2021-03-17
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.2.1...v0.3.0)
