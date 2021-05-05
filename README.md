@@ -88,6 +88,14 @@ netplan_packages:
   - 'netplan.io'
 ```
 
+#### Package ifupdown Network Configuration File
+
+Network configuration file that is present if networking is managed by package ifupdown:
+
+```yaml
+ifupdown_ifstate_file: '/run/network/ifstate'
+```
+
 ## Troubleshooting
 
 ### Cleaning Up: Please Uninstall Package ifupdown Manually

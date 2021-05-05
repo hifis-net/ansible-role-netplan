@@ -60,16 +60,29 @@
 
 - name: Check if file ifstate exists.
   ansible.builtin.stat:
-    path: '/run/network/ifstate'
+    path: "{{ ifupdown_ifstate_file }}"
   register: file_ifstate
 
-- name: Check if reboot is required.
-  ansible.builtin.debug:
-    msg: |
-      "Reboot is required to switch from ifupdown to netplan.
-       Triggering the reboot handler now."
-  changed_when: file_ifstate.stat.exists
+- name: Check whether to reboot host if file ifstate exists.
   when: file_ifstate.stat.exists
-  notify: Reboot managed node
+  block:
+    - name: Read in ifstate file content.
+      ansible.builtin.slurp:
+        src: "{{ ifupdown_ifstate_file }}"
+      register: slurped_file
+
+    - name: Compare ifstate file content to determine whether reboot is necessary.
+      ansible.builtin.set_fact:
+        reboot_to_switch_to_netplan: "{{ slurped_file.content != 'lo=lo\n'|b64encode }}"
+
+    - name: Trigger reboot to switch to netplan.
+      ansible.builtin.debug:
+        msg: |
+          "Reboot is required to switch from ifupdown to netplan.
+           Triggering the reboot handler now."
+      changed_when: reboot_to_switch_to_netplan | bool
+      when:
+        - reboot_to_switch_to_netplan | bool
+      notify: Reboot managed node
 
 ...

@@ -17,5 +17,7 @@ netplan_configuration_file_path: "{{ (netplan_configuration_dir, netplan_configu
 # Packages to be installed
 netplan_packages:
   - 'netplan.io'
+# Package ifupdown network configuration file
+ifupdown_ifstate_file: '/run/network/ifstate'
 
 ...
