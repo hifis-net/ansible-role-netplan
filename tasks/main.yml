@@ -63,7 +63,7 @@
     path: "{{ ifupdown_ifstate_file }}"
   register: file_ifstate
 
-- name: Check whether to reboot hosts if file ifstate exists.
+- name: Check whether to reboot host if file ifstate exists.
   when: file_ifstate.stat.exists
   block:
     - name: Read in ifstate file content.
@@ -82,7 +82,6 @@
            Triggering the reboot handler now."
       changed_when: reboot_to_switch_to_netplan | bool
       when:
-        - reboot_to_switch_to_netplan is defined
         - reboot_to_switch_to_netplan | bool
       notify: Reboot managed node
 
