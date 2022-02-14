@@ -16,6 +16,16 @@ Group your changes into these categories:
 
 `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`.
 
+## Unreleased
+
+[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.3.1...main)
+
+### Changed
+
+- Update Python dependencies and use Python 3.9 in GitLab CI
+  ([!17](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/17)
+  by [tobiashuste](https://gitlab.com/tobiashuste)).
+
 ## [0.3.1](https://gitlab.com/hifis/ansible/netplan-role/-/releases/v0.3.1) - 2021-05-05
 
 [List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.3.0...v0.3.1)
