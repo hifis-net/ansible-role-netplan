@@ -5,6 +5,7 @@
 
 galaxy_info:
   role_name: netplan
+  namespace: hifis
   author: HIFIS Software Team
   description: Configure network with netplan.
   company: Helmholtz Association
