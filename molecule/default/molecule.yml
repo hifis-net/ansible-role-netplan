@@ -10,13 +10,12 @@ driver:
   name: docker
 platforms:
   - name: instance_netplan
-    image: jrei/systemd-ubuntu:20.04
+    image: geerlingguy/docker-${MOLECULE_DISTRO:-ubuntu2004}-ansible:latest
     pre_build_image: true
     privileged: true
     override_command: false
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    network_mode: 'default'
     docker_networks:
       - name: 'netplan_network'
         ipam_config:
