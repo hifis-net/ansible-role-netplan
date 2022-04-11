@@ -7,6 +7,13 @@ SPDX-License-Identifier: Apache-2.0
 
 # Netplan Role
 
+[![CI Status](https://github.com/hifis-net/ansible-role-netplan/actions/workflows/ci.yml/badge.svg)](https://github.com/hifis-net/ansible-role-haproxy/actions/workflows/ci.yml)
+[![Ansible Galaxy Role](https://img.shields.io/ansible/role/53400?color=orange)](https://galaxy.ansible.com/hifis/netplan)
+[![Ansible Galaxy Role downloads](https://img.shields.io/ansible/role/d/53400)](https://galaxy.ansible.com/hifis/netplan)
+[![Ansible Galaxy quality score](https://img.shields.io/ansible/quality/53400)](https://galaxy.ansible.com/hifis/netplan)
+[![Apache-2.0 Licensed](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/hifis-net/ansible-role-netplan/blob/main/LICENSES/Apache-2.0.txt)
+[![Latest release](https://img.shields.io/github/v/release/hifis-net/ansible-role-netplan)](https://github.com/hifis-net/ansible-role-netplan/releases)
+
 Ansible role to install and configure Netplan.
 
 ## Requirements
