@@ -7,12 +7,12 @@
 
 - name: Generate netplan networking
   become: yes
-  command:
+  ansible.builtin.command:
     cmd: netplan generate
 
 - name: Apply netplan networking
   become: yes
-  command:
+  ansible.builtin.command:
     cmd: netplan apply
 
 - name: Gather network facts
