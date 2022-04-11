@@ -6,7 +6,7 @@
 ---
 
 - name: Check whether network configurations are given.
-  assert:
+  ansible.builtin.assert:
     that:
       - netplan_ethernets is defined and netplan_ethernets | length > 0
 
@@ -23,7 +23,7 @@
 
 - name: Install netplan packages.
   become: yes
-  package:
+  ansible.builtin.package:
     name: "{{ netplan_packages }}"
     state: present
     update_cache: yes
@@ -32,7 +32,7 @@
   when: netplan_remove_existing_configs
   block:
     - name: Get netplan config files.
-      find:
+      ansible.builtin.find:
         paths: "{{ netplan_configuration_dir }}"
         file_type: file
         excludes:
@@ -40,13 +40,13 @@
       register: netplan_config_files
 
     - name: Remove netplan config files.
-      file:
+      ansible.builtin.file:
         path: "{{ item.path }}"
         state: absent
       with_items: "{{ netplan_config_files['files'] }}"
 
 - name: Create a netplan config file from template.
-  template:
+  ansible.builtin.template:
     src: "{{ netplan_configuration_file_template }}"
     dest: "{{ netplan_configuration_file_path }}"
     owner: root
