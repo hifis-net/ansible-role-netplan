@@ -16,7 +16,7 @@ reuse = "0.14.0"
 netaddr = "0.8.0"
 
 [packages]
-ansible = "~=5.6.0"
+ansible = "~=5.8.0"
 
 [requires]
 python_version = "3.9"
