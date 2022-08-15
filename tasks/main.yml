@@ -73,7 +73,7 @@
 
     - name: Compare ifstate file content to determine whether reboot is necessary.
       ansible.builtin.set_fact:
-        reboot_to_switch_to_netplan: "{{ slurped_file.content != 'lo=lo\n'|b64encode }}"
+        reboot_to_switch_to_netplan: "{{ slurped_file.content != 'lo=lo\n' | b64encode }}"
 
     - name: Trigger reboot to switch to netplan.
       ansible.builtin.debug:
