@@ -32,9 +32,9 @@ Sample configuration to set up networking with Netplan:
 netplan_ethernets:
   - interface_name: 'eth0'
     dhcp4: 'no'
-    gateway4: '10.1.0.1'
+    gateway4: '10.123.0.1'
     addresses:
-      - '10.1.0.10/24'
+      - '10.123.0.10/24'
     nameservers:
       addresses:
         - '8.8.8.8'
