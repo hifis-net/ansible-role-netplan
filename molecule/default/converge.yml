@@ -22,7 +22,7 @@
             - 'domain.name'
   tasks:
     - name: "Include netplan_role"
-      include_role:
+      ansible.builtin.include_role:
         name: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
 
 ...
