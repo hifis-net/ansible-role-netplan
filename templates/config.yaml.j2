@@ -19,7 +19,9 @@ network:
       dhcp4: "{{ ethernet['dhcp4'] }}"
 {% endif %}
 {% if ethernet['gateway4'] is defined %}
-      gateway4: "{{ ethernet['gateway4'] }}"
+      routes:
+        - to: "default"
+          via: "{{ ethernet['gateway4'] }}"
 {% endif %}
 {% if ethernet['addresses'] is defined %}
       addresses:
