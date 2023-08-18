@@ -7,25 +7,17 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: podman
 platforms:
-  - name: instance_netplan
-    image: geerlingguy/docker-${MOLECULE_DISTRO:-ubuntu2004}-ansible:latest
+  - name: instancenetplan
+    image: ${MOLECULE_IMAGE:-ghcr.io/hifis-net/ubuntu-systemd:22.04}
     pre_build_image: true
-    privileged: true
     override_command: false
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    docker_networks:
-      - name: 'netplan_network'
-        ipam_config:
-          - subnet: '10.1.0.0/24'
-    networks:
-      - name: 'netplan_network'
-        ipv4_address: '10.1.0.2'
-lint: |
-  yamllint --strict --format colored . &&
-  ansible-lint -v --force-color --offline --exclude .pipenv/ .
+    privileged: true
+    systemd: true
+    tty: true
+    extra_opts:
+      - "--network netplan_network"
 provisioner:
   name: ansible
   playbooks:
