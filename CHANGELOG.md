@@ -1,26 +1,53 @@
-<!--
-SPDX-FileCopyrightText: 2021 Helmholtz Centre for Environmental Research (UFZ)
-SPDX-FileCopyrightText: 2021 Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
-
-SPDX-License-Identifier: Apache-2.0
--->
-
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## [v0.4.0](https://github.com/hifis-net/ansible-role-netplan/tree/v0.4.0) (2023-08-22)
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+[Full Changelog](https://github.com/hifis-net/ansible-role-netplan/compare/v0.3.1...v0.4.0)
 
-Group your changes into these categories:
+**Implemented enhancements:**
 
-`Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Security`.
+- Use FQCN everywhere [\#9](https://github.com/hifis-net/ansible-role-netplan/issues/9)
+- Add badges to README [\#7](https://github.com/hifis-net/ansible-role-netplan/issues/7)
 
-## Unreleased
+**Fixed bugs:**
 
-[List of commits](https://gitlab.com/hifis/ansible/netplan-role/-/compare/v0.3.1...main)
+- Molecule folder not linted by molecule [\#46](https://github.com/hifis-net/ansible-role-netplan/issues/46)
+- Computed fully qualified role name of netplan does not follow current galaxy requirements [\#5](https://github.com/hifis-net/ansible-role-netplan/issues/5)
+- Update Ansible Galaxy meta information [\#6](https://github.com/hifis-net/ansible-role-netplan/pull/6) ([tobiashuste](https://github.com/tobiashuste))
 
-### Changed
+**Closed issues:**
+
+- Fix ansible-lint violations [\#79](https://github.com/hifis-net/ansible-role-netplan/issues/79)
+- Replace deprecated gateway4 by routes [\#77](https://github.com/hifis-net/ansible-role-netplan/issues/77)
+- Switch to molecule-podman [\#56](https://github.com/hifis-net/ansible-role-netplan/issues/56)
+- Deprecation: Use 'ansible.utils.ipaddr' module instead [\#12](https://github.com/hifis-net/ansible-role-netplan/issues/12)
+
+**Merged pull requests:**
+
+- fix: replace deprecated gateway4 by routes [\#83](https://github.com/hifis-net/ansible-role-netplan/pull/83) ([tobiashuste](https://github.com/tobiashuste))
+- fix: get rid of ansible-lint violations [\#80](https://github.com/hifis-net/ansible-role-netplan/pull/80) ([tobiashuste](https://github.com/tobiashuste))
+- fix: switch from docker to podman in molecule [\#78](https://github.com/hifis-net/ansible-role-netplan/pull/78) ([tobiashuste](https://github.com/tobiashuste))
+- Bump ansible-lint from 6.8.2 to 6.8.6 [\#51](https://github.com/hifis-net/ansible-role-netplan/pull/51) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump molecule from 4.0.2 to 4.0.3 [\#47](https://github.com/hifis-net/ansible-role-netplan/pull/47) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump molecule from 4.0.1 to 4.0.2 [\#45](https://github.com/hifis-net/ansible-role-netplan/pull/45) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible-lint from 6.4.0 to 6.8.2 [\#44](https://github.com/hifis-net/ansible-role-netplan/pull/44) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible from 6.4.0 to 6.5.0 [\#43](https://github.com/hifis-net/ansible-role-netplan/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible from 6.2.0 to 6.4.0 [\#37](https://github.com/hifis-net/ansible-role-netplan/pull/37) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump yamllint from 1.27.1 to 1.28.0 [\#36](https://github.com/hifis-net/ansible-role-netplan/pull/36) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible from 5.6.0 to 6.2.0 [\#31](https://github.com/hifis-net/ansible-role-netplan/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible-lint from 6.0.2 to 6.4.0 [\#30](https://github.com/hifis-net/ansible-role-netplan/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump molecule from 3.6.1 to 4.0.1 [\#29](https://github.com/hifis-net/ansible-role-netplan/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump yamllint from 1.26.3 to 1.27.1 [\#27](https://github.com/hifis-net/ansible-role-netplan/pull/27) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump robertdebock/galaxy-action from 1.2.0 to 1.2.1 [\#20](https://github.com/hifis-net/ansible-role-netplan/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump reuse from 0.14.0 to 1.0.0 [\#19](https://github.com/hifis-net/ansible-role-netplan/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Use FQCN everywhere [\#10](https://github.com/hifis-net/ansible-role-netplan/pull/10) ([tobiashuste](https://github.com/tobiashuste))
+- Add badges to README [\#8](https://github.com/hifis-net/ansible-role-netplan/pull/8) ([tobiashuste](https://github.com/tobiashuste))
+- Bump ansible from 5.3.0 to 5.6.0 [\#4](https://github.com/hifis-net/ansible-role-netplan/pull/4) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump molecule from 3.6.0 to 3.6.1 [\#3](https://github.com/hifis-net/ansible-role-netplan/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible-lint from 5.4.0 to 6.0.2 [\#2](https://github.com/hifis-net/ansible-role-netplan/pull/2) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Implement CI pipeline via GitHub Actions [\#1](https://github.com/hifis-net/ansible-role-netplan/pull/1) ([tobiashuste](https://github.com/tobiashuste))
+
+**Changed on GitLab.com**
 
 - Update Python dependencies and use Python 3.9 in GitLab CI
   ([!17](https://gitlab.com/hifis/ansible/netplan-role/-/merge_requests/17)
@@ -98,3 +125,6 @@ Group your changes into these categories:
 ### Added
 
 Initial release of the Ansible Netplan Role.
+
+
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
