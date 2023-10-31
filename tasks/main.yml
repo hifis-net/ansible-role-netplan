@@ -51,7 +51,7 @@
     dest: "{{ netplan_configuration_file_path }}"
     owner: root
     group: root
-    mode: '0644'
+    mode: '0600'
     backup: yes
   notify:
     - Generate netplan networking
