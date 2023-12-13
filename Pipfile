@@ -13,7 +13,7 @@ ansible = "~=8.2.0"
 ansible-core = "==2.15.2"
 
 [dev-packages]
-yamllint = "~=1.32.0"
+yamllint = "~=1.33.0"
 ansible-lint = "6.17.2"
 molecule = "~=5.1.0"
 molecule-plugins = {extras = ["podman"], version = "~=23.5.0"}
