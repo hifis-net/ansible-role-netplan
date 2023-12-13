@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.5.0](https://github.com/hifis-net/ansible-role-netplan/tree/v0.5.0) (2023-12-13)
+
+[Full Changelog](https://github.com/hifis-net/ansible-role-netplan/compare/v0.4.0...v0.5.0)
+
+**Fixed bugs:**
+
+- Fix wide permissions warning [\#98](https://github.com/hifis-net/ansible-role-netplan/pull/98) ([chrisvanmeer](https://github.com/chrisvanmeer))
+
+**Merged pull requests:**
+
+- Update Ansible to 9.1.0 [\#105](https://github.com/hifis-net/ansible-role-netplan/pull/105) ([tobiashuste](https://github.com/tobiashuste))
+- Bump ansible-core from 2.15.2 to 2.15.8 [\#103](https://github.com/hifis-net/ansible-role-netplan/pull/103) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible-lint from 6.17.2 to 6.22.1 [\#102](https://github.com/hifis-net/ansible-role-netplan/pull/102) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump yamllint from 1.32.0 to 1.33.0 [\#101](https://github.com/hifis-net/ansible-role-netplan/pull/101) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump netaddr from 0.8.0 to 0.9.0 [\#90](https://github.com/hifis-net/ansible-role-netplan/pull/90) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 3 to 4 [\#87](https://github.com/hifis-net/ansible-role-netplan/pull/87) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump molecule from 5.1.0 to 6.0.2 [\#86](https://github.com/hifis-net/ansible-role-netplan/pull/86) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.4.0](https://github.com/hifis-net/ansible-role-netplan/tree/v0.4.0) (2023-08-22)
 
 [Full Changelog](https://github.com/hifis-net/ansible-role-netplan/compare/v0.3.1...v0.4.0)
@@ -24,6 +42,7 @@
 
 **Merged pull requests:**
 
+- chore: setup changelog-generator and prepare version 0.4.0 [\#84](https://github.com/hifis-net/ansible-role-netplan/pull/84) ([tobiashuste](https://github.com/tobiashuste))
 - fix: replace deprecated gateway4 by routes [\#83](https://github.com/hifis-net/ansible-role-netplan/pull/83) ([tobiashuste](https://github.com/tobiashuste))
 - fix: get rid of ansible-lint violations [\#80](https://github.com/hifis-net/ansible-role-netplan/pull/80) ([tobiashuste](https://github.com/tobiashuste))
 - fix: switch from docker to podman in molecule [\#78](https://github.com/hifis-net/ansible-role-netplan/pull/78) ([tobiashuste](https://github.com/tobiashuste))
