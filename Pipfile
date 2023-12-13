@@ -9,7 +9,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
-ansible = "~=8.2.0"
+ansible = "~=8.7.0"
 ansible-core = "==2.15.8"
 
 [dev-packages]
