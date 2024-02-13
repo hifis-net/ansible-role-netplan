@@ -15,7 +15,7 @@ ansible = "~=9.2.0"
 yamllint = "~=1.34.0"
 ansible-lint = "24.2.0"
 molecule = "~=24.2.0"
-molecule-plugins = {extras = ["podman"], version = "~=23.5.0"}
+molecule-plugins = {extras = ["podman"], version = "~=23.5.3"}
 reuse = "~=3.0.1"
 netaddr = "1.0.0"
 
